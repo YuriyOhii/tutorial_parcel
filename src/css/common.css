@@ -1,0 +1,27 @@
+body {
+    color: #212121;
+    padding: 20px;
+}
+
+.comeback-link {
+    font-weight: 500;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.link {
+    display: block;
+    font-size: 20px;
+    color: tomato;
+}
+
+.link:not(:last-child) {
+    margin-bottom: 12px;
+}
+form input,
+form textarea,
+.btn {
+    display: block;
+    margin-bottom: 12px;
+}

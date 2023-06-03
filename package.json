@@ -1,0 +1,28 @@
+{
+  "name": "tutorial_parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/*html",
+    "build": "parcel build src/*html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriyOhii/tutorial_parcel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuriyOhii/tutorial_parcel/issues"
+  },
+  "homepage": "https://github.com/YuriyOhii/tutorial_parcel#readme",
+  "devDependencies": {
+    "parcel": "^2.9.1"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
+  }
+}

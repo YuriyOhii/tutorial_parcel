@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with UX</title>
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+  <body>
+    <a class="comeback-link" href="./index.html">На головну</a>
+
+    <form class="feedback-form js-feedback-form">
+      <label>
+        <b>Ім'я</b>
+        <input
+          type="text"
+          name="name"
+          value="Анонімус"
+          placeholder="Введіть Ваше ім'я"
+          autocomplete="off"
+        />
+      </label>
+      <label>
+        <b>Повідомлення</b>
+        <textarea name="message" rows="10"  placeholder="Залиште Ваше повідомлення тут...."></textarea>
+      </label>
+      <button class="btn" type="submit">Залишити відгук</button>
+    </form>
+    <script type="module" src="./js/form.js"></script>
+  </body>
+</html>
