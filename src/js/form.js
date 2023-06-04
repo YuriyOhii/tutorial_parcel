@@ -1,16 +1,13 @@
 const throttle = require("lodash.throttle");
 
-const refs = {
-  message: document.querySelector("textarea"),
-  form: document.querySelector(".js-feedback-form"),
-};
-
+const formRef = document.querySelector(".js-feedback-form");
 let formData = {};
 const LOCKSTORAGE_KEY = "feedback_form_message";
+
 restartPage();
 
-refs.form.addEventListener("input",throttle(onFormInput, 500));
-refs.form.addEventListener("submit", onFormSubmit);
+formRef.addEventListener("input",throttle(onFormInput, 500));
+formRef.addEventListener("submit", onFormSubmit);
 
 function onFormInput(e) {
     formData[e.target.name] = e.target.value;
@@ -28,9 +25,20 @@ function onFormSubmit(e) {
 function restartPage() {
     const savedData = localStorage.getItem(LOCKSTORAGE_KEY);
     if (savedData) {
-        formData = JSON.parse(savedData);
-        console.log(formData);
-        console.dir(refs.form)
+      const savedDataObj = JSON.parse(savedData);
+      if (savedDataObj.message)
+      {
+        formRef.elements.message.value = savedDataObj.message;
+        formData.message = savedDataObj.message;
+      }
+      if (savedDataObj.name) {
+        formRef.elements.name.value = savedDataObj.name;
+                formData.name = savedDataObj.name;
+      }
+      if (savedDataObj.check) {
+        formRef.elements.check.checked = savedDataObj.check;
+        formData.check = savedDataObj.check;
+      }
     }
         
         
